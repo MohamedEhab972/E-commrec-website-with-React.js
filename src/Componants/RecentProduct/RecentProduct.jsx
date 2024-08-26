@@ -50,9 +50,7 @@ export default function RecentProduct() {
     console.log(res);
     if (res.data.status == "success") {
       setIdProduct1(res.data.data);
-      localStorage.setItem("favproducts", JSON.stringify(res.data.data));
       setfavProducts1(res.data.data.length);
-      localStorage.setItem("favrNum", JSON.stringify(res.data.data.length));
       toast.success("The product remove successfully");
     } else {
       toast.error(res.data.message);
@@ -64,9 +62,7 @@ export default function RecentProduct() {
     console.log(res);
     if (res.data.status == "success") {
       setIdProduct1(res.data.data);
-      localStorage.setItem("favproducts", JSON.stringify(res.data.data));
       setfavProducts1(res.data.data.length);
-      localStorage.setItem("favrNum", JSON.stringify(res.data.data.length));
       toast.success(res.data.message);
     } else {
       toast(res.data.message);

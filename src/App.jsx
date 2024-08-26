@@ -23,6 +23,7 @@ import Login from "./Componants/Login/Login";
 import Register from "./Componants/Register/Register";
 import Notfound from "./Componants/Notfound/Notfound";
 import Products from "./Componants/Products/Products";
+import Allorders from "./Componants/Allorders/Allorders";
 
 let query = new QueryClient();
 
@@ -44,6 +45,14 @@ let x = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <Brands />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "allorders",
+        element: (
+          <ProtectedRoute>
+            <Allorders />
           </ProtectedRoute>
         ),
       },

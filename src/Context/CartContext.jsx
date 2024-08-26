@@ -38,7 +38,9 @@ export default function CartContextProvider(props) {
     return axios
       .get(`https://ecommerce.routemisr.com/api/v1/wishlist`, { headers })
       .then((res) => {
-        console.log(res.data.count);
+        console.log(res.data.data[0]._id);
+        let favproducts = res.data.data.map((product) => product._id);
+        setIdProduct1(favproducts);
         setfavProducts1(res.data.count);
         return res;
       })
