@@ -12,7 +12,7 @@ export default function CartContextProvider(props) {
   const [IdProduct1, setIdProduct1] = useState(
     localStorage.getItem("favproducts")
       ? localStorage.getItem("favproducts")
-      : null
+      : ""
   );
 
   function addProductToWishlist(productId) {
