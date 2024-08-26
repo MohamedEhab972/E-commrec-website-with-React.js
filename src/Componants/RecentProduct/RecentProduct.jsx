@@ -201,7 +201,7 @@ export default function RecentProduct() {
                   className="ac-footer absolute top-6 right-12 cursor-pointer"
                 >
                   <div className="ac-footer-container ac-footer-brand">
-                    {IdProduct1.includes(product.id) ? (
+                    {IdProduct1?.includes(product.id) ? (
                       <i className="fa-solid fa-heart text-red-600"></i>
                     ) : (
                       <i className="fa-solid fa-heart"></i>
